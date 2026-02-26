@@ -64,7 +64,7 @@ export default function Home() {
         <title>SIRHEXXUS — Builder. Breaker. Thinker.</title>
         <meta
           name="description"
-          content="James Stacy — IT professional, homelab builder, security student. I write about homelabs, cybersecurity, dev, and whatever else I can't stop thinking about."
+          content="James Stacy — IT professional, homelab builder, security student. I write about homelabs, cybersecurity, dev, and whatever else has my attention."
         />
       </Head>
 
@@ -81,8 +81,8 @@ export default function Home() {
             and write about all of it.
           </h1>
           <p className={styles.hero__sub}>
-            IT career. Security cert grind. Homelab as a learning machine. And plenty of
-            D&amp;D in the margins.
+            IT career. Security cert grind. Homelab as a learning machine. Creating TTRPG
+            worlds with which to torment my players.
           </p>
           <div className={styles.hero__actions}>
             <Link href="/#focus" className="btn btn--primary">
@@ -132,21 +132,19 @@ export default function Home() {
               <div className={styles.about_bio}>
                 <p>
                   I'm James — IT professional with a background in calibration and weighing
-                  instruments. Spent years keeping precision measurement equipment honest, which
-                  turns out is great training for the meticulous, detail-obsessed mindset that
-                  security work demands.
+                  instruments. Spent years keeping precision measurement equipment honest.
                 </p>
                 <p>
-                  These days I'm deep in a pivot toward cybersecurity: building out a Proxmox
+                  These days I'm moving into cybersecurity: building out a Proxmox
                   homelab managed entirely with Terraform and Ansible, grinding through Security+
                   and Google's Cybersecurity certificate, and aiming for a SOC Analyst role by
                   June 2026.
                 </p>
                 <p>
-                  I have ADHD, which means I hyper-focus intensely when something captures my
-                  interest — and right now, it's security. The same brain that spent three hours
-                  optimizing a shell script or deep-diving a BattleTech sourcebook is now
-                  pointed at log analysis and threat modeling. It's a feature, not a bug.
+                  I have ADHD, which means I hyper-focus when something captures my interest —
+                  and right now, it's security. The same brain that spent three hours optimizing
+                  a shell script or theorycrafting BattleTech unit compositions is now pointed at log
+                  analysis and threat modeling.
                 </p>
                 <p>
                   For professional services (web design, dev), head to{' '}

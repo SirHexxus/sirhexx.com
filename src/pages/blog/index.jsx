@@ -31,7 +31,7 @@ const BlogIndex = ({ posts }) => {
         <title>Blog — SIRHEXXUS</title>
         <meta
           name="description"
-          content="Homelab builds, security notes, dev logs, career thoughts, and whatever else is on my mind."
+          content="Homelab builds, security notes, dev logs, career thoughts, and whatever else has my attention."
         />
       </Head>
 
@@ -45,7 +45,7 @@ const BlogIndex = ({ posts }) => {
               All Posts
             </h1>
             <p className={styles.blog_index__sub}>
-              Homelabs, security, dev, career, and whatever I can't stop thinking about.
+              Homelabs, security, dev, career, and whatever else has my attention.
             </p>
           </header>
 
