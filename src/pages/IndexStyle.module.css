@@ -1,0 +1,270 @@
+/* ── Hero ────────────────────────────────── */
+
+.hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 100svh;
+	padding-top: var(--header-height);
+	overflow: hidden;
+	background-color: var(--color-bg);
+}
+
+/* CRT vignette */
+.hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* Scanlines — heavier than hexxusweb.com (cassette futurism) */
+.hero::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.04) 0px,
+		rgba(0, 0, 0, 0.04) 1px,
+		transparent 1px,
+		transparent 3px
+	);
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* Extra CRT vignette layer (radial, inside the hero div as a child) */
+.hero__crt_vignette {
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.4) 100%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.hero__content {
+	position: relative;
+	z-index: 1;
+	max-width: 860px;
+	padding-block: var(--space-24);
+}
+
+.hero__eyebrow {
+	margin-bottom: var(--space-6);
+}
+
+.hero__heading {
+	margin-bottom: var(--space-6);
+	font-size: clamp(var(--text-4xl), 6.5vw, var(--text-6xl));
+	line-height: var(--leading-tight);
+}
+
+.hero__heading_accent {
+	color: var(--color-signal);
+	text-shadow: var(--glow-text-md);
+}
+
+.hero__sub {
+	max-width: 55ch;
+	margin-bottom: var(--space-8);
+	font-size: var(--text-lg);
+	line-height: var(--leading-loose);
+	color: var(--color-text-secondary);
+}
+
+.hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-4);
+	align-items: center;
+}
+
+/* Scroll hint */
+.hero__scroll_hint {
+	position: absolute;
+	bottom: var(--space-8);
+	left: 50%;
+	transform: translateX(-50%);
+	animation: scroll-hint-bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll_arrow {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-right: 2px solid var(--color-text-secondary);
+	border-bottom: 2px solid var(--color-text-secondary);
+	transform: rotate(45deg);
+	opacity: 0.5;
+}
+
+@keyframes scroll-hint-bounce {
+	0%, 100% { transform: translateX(-50%) translateY(0); }
+	50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero__scroll_hint {
+		animation: none;
+	}
+}
+
+
+/* ── Focus grid ──────────────────────────── */
+
+.focus_section {
+	/* inherits .section.section--alt spacing */
+}
+
+.focus_grid {
+	display: grid;
+	gap: var(--space-6);
+}
+
+@media (min-width: 576px) {
+	.focus_grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.focus_grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+
+/* ── About ───────────────────────────────── */
+
+.about__eyebrow {
+	color: var(--color-amber);
+}
+
+.about_grid {
+	display: grid;
+	gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+	.about_grid {
+		grid-template-columns: 1.3fr 1fr;
+		align-items: start;
+	}
+}
+
+.about_bio {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-4);
+	font-size: var(--text-base);
+	line-height: var(--leading-loose);
+	color: var(--color-text-secondary);
+}
+
+.about_bio p a {
+	color: var(--color-signal);
+}
+
+.about_skills {
+	margin-top: var(--space-4);
+}
+
+.about_skills__label {
+	font-family: var(--font-vt);
+	font-size: 1rem;
+	color: var(--color-amber);
+	letter-spacing: 0.05em;
+	margin-bottom: var(--space-3);
+}
+
+.about_skills__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2);
+}
+
+.about_sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-8);
+}
+
+/* Interests list */
+.about_interests__title,
+.about_certs__title {
+	font-family: var(--font-display);
+	font-size: var(--text-lg);
+	font-weight: var(--weight-bold);
+	margin-bottom: var(--space-4);
+	color: var(--color-text-primary);
+}
+
+.about_interests__list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3);
+	list-style: none;
+}
+
+.about_interests__item {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-3);
+}
+
+.about_interests__icon {
+	font-size: 1.2rem;
+	flex-shrink: 0;
+	margin-top: 0.1em;
+}
+
+.about_interests__label {
+	display: block;
+	font-weight: var(--weight-medium);
+	color: var(--color-text-primary);
+	font-size: var(--text-sm);
+}
+
+.about_interests__sub {
+	display: block;
+	font-size: var(--text-xs);
+	color: var(--color-text-secondary);
+}
+
+/* Certs list */
+.about_certs__list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3);
+	list-style: none;
+}
+
+.about_certs__item {
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+	font-size: var(--text-sm);
+	color: var(--color-text-secondary);
+}
+
+
+/* ── Recent posts ────────────────────────── */
+
+.recent_posts_grid {
+	display: grid;
+	gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+	.recent_posts_grid {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+}
+
+.recent_posts_cta {
+	margin-top: var(--space-8);
+	text-align: center;
+}

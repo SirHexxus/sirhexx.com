@@ -1,0 +1,86 @@
+.focus_card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3);
+	padding: var(--space-6);
+	background-color: var(--color-bg-elevated);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.focus_card:hover {
+	border-color: var(--color-border-strong);
+	box-shadow: var(--glow-sm);
+}
+
+.focus_card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-3);
+}
+
+.focus_card__label {
+	font-family: var(--font-vt);
+	font-size: 1rem;
+	color: var(--color-amber);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.focus_card__status {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+	font-family: var(--font-vt);
+	font-size: 0.95rem;
+	letter-spacing: 0.05em;
+}
+
+.focus_card__status--active {
+	color: var(--color-signal);
+}
+
+.focus_card__status--pending {
+	color: var(--color-amber);
+}
+
+.focus_card__status--complete {
+	color: var(--color-text-secondary);
+}
+
+/* Pulsing dot */
+.focus_card__dot {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	border-radius: var(--radius-full);
+	background-color: currentColor;
+}
+
+.focus_card__status--active .focus_card__dot {
+	animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+	0%, 100% { opacity: 1; transform: scale(1); }
+	50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.focus_card__dot {
+		animation: none;
+	}
+}
+
+.focus_card__title {
+	font-size: var(--text-lg);
+	color: var(--color-text-primary);
+}
+
+.focus_card__desc {
+	font-size: var(--text-sm);
+	color: var(--color-text-secondary);
+	line-height: var(--leading-normal);
+}
