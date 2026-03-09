@@ -22,9 +22,10 @@ const get_all_posts = () => {
 const get_post_by_slug = async (slug) => {
   const { remark }   = await import('remark');
   const remarkHtml   = (await import('remark-html')).default;
+  const remarkGfm    = (await import('remark-gfm')).default;
   const raw          = fs.readFileSync(path.join(POSTS_DIR, `${slug}.md`), 'utf-8');
   const { data, content } = matter(raw);
-  const processed    = await remark().use(remarkHtml).process(content);
+  const processed    = await remark().use(remarkGfm).use(remarkHtml).process(content);
   return { slug, frontmatter: data, contentHtml: processed.toString() };
 };
 
