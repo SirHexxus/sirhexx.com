@@ -13,6 +13,7 @@ const Document = () => (
     <body>
       <Main />
       <NextScript />
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"></script>
     </body>
   </Html>
 );
