@@ -85,10 +85,10 @@ export default function Home() {
             worlds with which to torment my players.
           </p>
           <div className={styles.hero__actions}>
-            <Link href="/#focus" className="btn btn--primary">
+            <Link href="/#focus" className="btn btn--primary" onClick={() => window.umami?.track('hero-cta-click', { label: 'what-im-building' })}>
               What I'm Building
             </Link>
-            <Link href="/blog/" className="btn btn--outline">
+            <Link href="/blog/" className="btn btn--outline" onClick={() => window.umami?.track('hero-cta-click', { label: 'read-the-blog' })}>
               Read the Blog
             </Link>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
                 </p>
                 <p>
                   For professional services (web design, dev), head to{' '}
-                  <a href="https://hexxusweb.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://hexxusweb.com" target="_blank" rel="noopener noreferrer" onClick={() => window.umami?.track('outbound-link-click', { destination: 'hexxusweb.com' })}>
                     hexxusweb.com
                   </a>
                   . This site is the whole person.
@@ -231,7 +231,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
           <div className={styles.recent_posts_cta}>
-            <Link href="/blog/" className="btn btn--outline">
+            <Link href="/blog/" className="btn btn--outline" onClick={() => window.umami?.track('homepage-cta-click', { label: 'all-posts' })}>
               All posts →
             </Link>
           </div>
