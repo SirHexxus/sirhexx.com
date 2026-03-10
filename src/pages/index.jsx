@@ -148,7 +148,7 @@ export default function Home() {
                 </p>
                 <p>
                   For professional services (web design, dev), head to{' '}
-                  <a href="https://hexxusweb.com" target="_blank" rel="noopener noreferrer" onClick={() => window.umami?.track('outbound-link-click', { destination: 'hexxusweb.com' })}>
+                  <a href="https://hexxusweb.com?utm_source=sirhexx&utm_medium=internal&utm_campaign=blog-referral" target="_blank" rel="noopener noreferrer" onClick={() => window.umami?.track('outbound-link-click', { destination: 'hexxusweb.com' })}>
                     hexxusweb.com
                   </a>
                   . This site is the whole person.
