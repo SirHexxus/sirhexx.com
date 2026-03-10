@@ -20,6 +20,7 @@ const SiteHeader = () => {
 
   const close_menu = () => setMenuOpen(false);
   const handle_toggle = () => setMenuOpen(prev => !prev);
+  const handle_hire_me_click = () => window.umami?.track('outbound-link-click', { destination: 'hexxusweb.com' });
 
   useEffect(() => {
     const handle_scroll = () => setScrolled(window.scrollY > 50);
@@ -74,6 +75,7 @@ const SiteHeader = () => {
                 className={`${styles.site_nav__link} ${styles['site_nav__link--hire']}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handle_hire_me_click}
               >
                 Hire Me
               </a>
@@ -122,7 +124,7 @@ const SiteHeader = () => {
                 className={`${styles.mobile_menu__link} ${styles['mobile_menu__link--hire']}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={close_menu}
+                onClick={() => { close_menu(); handle_hire_me_click(); }}
               >
                 Hire Me
               </a>

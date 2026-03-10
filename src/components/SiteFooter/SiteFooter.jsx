@@ -37,6 +37,7 @@ const SiteFooter = () => {
                 href="https://hexxusweb.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => window.umami?.track('outbound-link-click', { destination: 'hexxusweb.com' })}
               >
                 hexxusweb.com
               </a>
