@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
@@ -12,8 +13,29 @@ const format_date = (dateStr) => {
   return `${year}.${month}.${day}`;
 };
 
-const BlogPost = ({ frontmatter, contentHtml }) => {
+const BlogPost = ({ slug, frontmatter, contentHtml }) => {
   const { title, date, category, readTime } = frontmatter;
+
+  useEffect(() => {
+    const reached = new Set();
+    const THRESHOLDS = [50, 90];
+
+    const handle_scroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      const pct = Math.round((scrolled / total) * 100);
+
+      for (const threshold of THRESHOLDS) {
+        if (pct >= threshold && !reached.has(threshold)) {
+          reached.add(threshold);
+          window.umami?.track('post-scroll-depth', { slug, depth: `${threshold}%` });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handle_scroll, { passive: true });
+    return () => window.removeEventListener('scroll', handle_scroll);
+  }, [slug]);
 
   return (
     <Layout>
