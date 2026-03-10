@@ -7,7 +7,10 @@ const BlogFilter = ({ categories, activeCategory, onFilterChange }) => (
         key={cat.value}
         className={`badge badge--category ${activeCategory === cat.value ? 'is-active' : ''}`}
         aria-pressed={activeCategory === cat.value}
-        onClick={() => onFilterChange(cat.value)}
+        onClick={() => {
+          onFilterChange(cat.value);
+          window.umami?.track('blog-filter-click', { category: cat.value });
+        }}
       >
         {cat.label}
       </button>
