@@ -9,7 +9,7 @@ import styles from './IndexStyle.module.css';
 const FOCUS_ITEMS = [
   {
     label:       'Infrastructure',
-    title:       'Homelab Phase 1 — IaC Foundation',
+    title:       'Homelab Phase 1 - IaC Foundation',
     description: 'Proxmox cluster + Terraform + Ansible. Building reproducible infra from scratch. Documenting everything.',
     status:      'Active',
     statusVariant: 'active',
@@ -30,7 +30,7 @@ const FOCUS_ITEMS = [
   },
   {
     label:       'Career Target',
-    title:       'SOC Analyst — June 2026',
+    title:       'SOC Analyst - June 2026',
     description: "Everything I'm building is aimed here. Certs + homelab + blue team knowledge = the foundation I need.",
     status:      'Target',
     statusVariant: 'pending',
@@ -52,7 +52,7 @@ const RECENT_POSTS = [
     title:    'Building My Homelab from Code: IaC with Terraform and Ansible',
     date:     '2026-02-25',
     category: 'homelab',
-    excerpt:  'How I went from manually clicking through Proxmox menus to provisioning VMs with a single command — and why infrastructure-as-code changed the way I think about my home network.',
+    excerpt:  'How I went from manually clicking through Proxmox menus to provisioning VMs with a single command - and why infrastructure-as-code changed the way I think about my home network.',
     readTime: 8,
   },
 ];
@@ -61,10 +61,10 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>SIRHEXXUS — Builder. Breaker. Thinker.</title>
+        <title>SIRHEXXUS - Builder. Breaker. Thinker.</title>
         <meta
           name="description"
-          content="James Stacy — IT professional, homelab builder, security student. I write about homelabs, cybersecurity, dev, and whatever else has my attention."
+          content="James Stacy - IT professional, homelab builder, security student. I write about homelabs, cybersecurity, dev, and whatever else has my attention."
         />
       </Head>
 
@@ -76,9 +76,9 @@ export default function Home() {
             builder / breaker / thinker
           </p>
           <h1 className={styles.hero__heading}>
-            I build homelabs,{' '}
-            <span className={styles.hero__heading_accent}>break things on purpose,</span>{' '}
-            and write about all of it.
+            Building homelabs,{' '}
+            <span className={styles.hero__heading_accent}>breaking things on purpose,</span>{' '}
+            writing about all of it.
           </h1>
           <p className={styles.hero__sub}>
             IT career. Security cert grind. Homelab as a learning machine. Creating TTRPG
@@ -131,7 +131,7 @@ export default function Home() {
               {/* Bio */}
               <div className={styles.about_bio}>
                 <p>
-                  I'm James — IT professional with a background in calibration and weighing
+                  I'm James - IT professional with a background in calibration and weighing
                   instruments. Spent years keeping precision measurement equipment honest.
                 </p>
                 <p>
@@ -141,7 +141,7 @@ export default function Home() {
                   June 2026.
                 </p>
                 <p>
-                  I have ADHD, which means I hyper-focus when something captures my interest —
+                  I have ADHD, which means I hyper-focus when something captures my interest -
                   and right now, it's security. The same brain that spent three hours optimizing
                   a shell script or theorycrafting BattleTech unit compositions is now pointed at log
                   analysis and threat modeling.
@@ -205,7 +205,7 @@ export default function Home() {
                     </li>
                     <li className={styles.about_certs__item}>
                       <span className="badge badge--skill">Target</span>
-                      <span>SOC Analyst role — June 2026</span>
+                      <span>SOC Analyst role - June 2026</span>
                     </li>
                   </ul>
                 </div>

@@ -2,7 +2,7 @@
 title: "Building My Homelab from Code: IaC with Terraform and Ansible"
 date: "2026-02-25"
 category: "homelab"
-excerpt: "How I went from manually clicking through Proxmox menus to provisioning VMs with a single command — and why infrastructure-as-code changed the way I think about my home network."
+excerpt: "How I went from manually clicking through Proxmox menus to provisioning VMs with a single command - and why infrastructure-as-code changed the way I think about my home network."
 readTime: 8
 ---
 
@@ -16,9 +16,9 @@ If you're working toward a SOC role or any infrastructure-adjacent career, you'l
 
 ## The Stack
 
-- **Proxmox VE** — hypervisor on my main server (repurposed desktop, 32GB RAM, Ryzen 5)
-- **Terraform** with the [bpg/proxmox provider](https://registry.terraform.io/providers/bpg/proxmox/latest) — VM provisioning
-- **Ansible** — post-provision configuration management
+- **Proxmox VE** - hypervisor on my main server (repurposed desktop, 32GB RAM, Ryzen 5)
+- **Terraform** with the [bpg/proxmox provider](https://registry.terraform.io/providers/bpg/proxmox/latest) - VM provisioning
+- **Ansible** - post-provision configuration management
 
 The general flow: Terraform creates and provisions the VM shell (CPU, RAM, disk, network). Ansible connects over SSH and configures the OS, installs packages, drops config files.
 
@@ -26,7 +26,7 @@ The general flow: Terraform creates and provisions the VM shell (CPU, RAM, disk,
 
 A fair question. The simple answer: they solve different problems.
 
-**Terraform** is great at declaring *what infrastructure should exist*. Idempotent. State-aware. If I apply the same config twice, it won't create duplicates — it'll compare actual state to desired state and do nothing if they match.
+**Terraform** is great at declaring *what infrastructure should exist*. Idempotent. State-aware. If I apply the same config twice, it won't create duplicates - it'll compare actual state to desired state and do nothing if they match.
 
 **Ansible** is better at *configuring what's running on that infrastructure*. It's agentless (just SSH), and playbooks are readable YAML that documents what the machine should look like.
 

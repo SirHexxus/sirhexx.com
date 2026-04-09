@@ -40,7 +40,7 @@ const BlogPost = ({ slug, frontmatter, contentHtml }) => {
   return (
     <Layout>
       <Head>
-        <title>{title} — SIRHEXXUS</title>
+        <title>{title} - SIRHEXXUS</title>
         <meta name="description" content={frontmatter.excerpt ?? ''} />
       </Head>
 

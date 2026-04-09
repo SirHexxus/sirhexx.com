@@ -1,5 +1,5 @@
 /* ============================================
-   globals.css — sirhexx.com
+   globals.css - sirhexx.com
    Design tokens, reset, base, prose styles.
    ============================================ */
 
@@ -12,12 +12,12 @@
 	--color-bg-surface:     #0A1628;
 	--color-bg-elevated:    #0F1E35;
 
-	/* Primary accent — Phosphor green */
+	/* Primary accent - Phosphor green */
 	--color-signal:         #00E676;
 	--color-signal-dim:     #00B359;
 	--color-signal-bright:  #69FFAC;
 
-	/* Secondary accent — CRT amber warmth */
+	/* Secondary accent - CRT amber warmth */
 	--color-amber:          #FFB827;
 	--color-amber-dim:      #CC8800;
 
@@ -29,7 +29,7 @@
 	--color-border:         rgba(0, 230, 118, 0.12);
 	--color-border-strong:  rgba(0, 230, 118, 0.35);
 
-	/* Glow — green */
+	/* Glow - green */
 	--glow-sm:      0 0 8px rgba(0, 230, 118, 0.30);
 	--glow-md:      0 0 16px rgba(0, 230, 118, 0.45), 0 0 32px rgba(0, 230, 118, 0.18);
 	--glow-text-sm: 0 0 10px rgba(0, 230, 118, 0.65);

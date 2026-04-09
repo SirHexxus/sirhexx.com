@@ -28,7 +28,7 @@ const BlogIndex = ({ posts }) => {
   return (
     <Layout>
       <Head>
-        <title>Blog — SIRHEXXUS</title>
+        <title>Blog - SIRHEXXUS</title>
         <meta
           name="description"
           content="Homelab builds, security notes, dev logs, career thoughts, and whatever else has my attention."
@@ -68,7 +68,7 @@ const BlogIndex = ({ posts }) => {
               <div className={styles.blog_index__empty} role="status">
                 <span className={styles.blog_index__empty_icon} aria-hidden="true">_</span>
                 <p>No posts in this category yet.</p>
-                <p className={styles.blog_index__empty_sub}>Check back soon — content incoming.</p>
+                <p className={styles.blog_index__empty_sub}>Check back soon - content incoming.</p>
               </div>
             )}
           </ScrollReveal>

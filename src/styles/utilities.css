@@ -1,5 +1,5 @@
 /* ============================================
-   utilities.css — sirhexx.com
+   utilities.css - sirhexx.com
    Single-purpose utility classes.
    ============================================ */
 
@@ -50,7 +50,7 @@
 	overflow: hidden;
 }
 
-/* Text accent — signal green with glow */
+/* Text accent - signal green with glow */
 .text-accent {
 	color: var(--color-signal);
 }

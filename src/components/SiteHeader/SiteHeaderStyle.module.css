@@ -101,7 +101,7 @@
 	color: var(--color-signal-bright);
 }
 
-/* Hire Me link — amber accent */
+/* Hire Me link - amber accent */
 .site_nav__link--hire {
 	color: var(--color-amber);
 	border: 1px solid rgba(255, 184, 39, 0.4);
